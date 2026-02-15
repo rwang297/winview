@@ -134,7 +134,7 @@ export default function HeroSection() {
 
             {/* Heading */}
             <h1
-              className="text-[56px] md:text-[72px] lg:text-[76px] font-bold leading-[1.1] tracking-tight text-neutral-900 dark:text-neutral-100 mb-6 lg:mb-8 mt-0"
+              className="text-[56px] md:text-[72px] lg:text-[76px] font-bold leading-[1.1] tracking-tight text-gray-950 mb-6 lg:mb-8 mt-0"
               style={{
                 fontFamily:
                   '-apple-system, BlinkMacSystemFont, "SF Pro Display", system-ui, sans-serif',
