@@ -119,7 +119,7 @@ export default function HeroSection() {
       {/* Warm ambient glow - extended upward */}
       <div className="absolute top-[-10%] left-[20%] w-[500px] h-[500px] bg-gradient-to-br from-brand-200/8 to-accent-200/8 rounded-full blur-[120px] pointer-events-none" />
 
-      <div className="max-w-[1200px] mx-auto relative z-10 pt-32">
+      <div className="w-full relative z-10 pt-32">
         <div className={`grid lg:grid-cols-2 gap-16 items-center`}>
           <div
             className={`text-center lg:text-left max-w-[600px] mx-auto lg:mx-0 transition-all duration-1000 ease-out transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
