@@ -58,7 +58,7 @@ export default function SavingsPackagesSection() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-6">
           {cards.map((card) => {
             const Icon = card.icon;
             const accent = card.accentBg;
@@ -67,44 +67,44 @@ export default function SavingsPackagesSection() {
             return (
               <div
                 key={card.key}
-                className="relative rounded-[28px] bg-white/70 backdrop-blur-xl border border-white/50 shadow-[0_20px_40px_-12px_rgba(0,0,0,0.1)] overflow-hidden group transition-all duration-300 ease-out hover:shadow-[0_30px_60px_-12px_rgba(0,0,0,0.15)] hover:scale-[1.02]"
+                className="relative rounded-[32px] bg-white backdrop-blur-xl border border-[#E5E7EB] shadow-[0_12px_32px_-8px_rgba(0,0,0,0.08)] overflow-hidden group transition-all duration-300 ease-out hover:shadow-[0_20px_48px_-12px_rgba(0,0,0,0.12)] hover:border-[#D1D5DB]"
               >
                 {/* Accent glow */}
                 <div
-                  className={`absolute -top-16 -right-16 w-56 h-56 bg-gradient-to-br ${accent} blur-3xl rounded-full`}
+                  className={`absolute -top-20 -right-20 w-64 h-64 bg-gradient-to-br ${accent} blur-3xl rounded-full opacity-40`}
                 />
 
-                <div className="p-6 relative z-10">
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-2xl bg-white/80 border border-white/60 flex items-center justify-center shadow-sm">
-                        <Icon className="text-[#1D1D1F]" size={22} />
+                <div className="p-8 relative z-10">
+                  <div className="flex items-center justify-between mb-8">
+                    <div className="flex items-center gap-4">
+                      <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#F3F4F6] to-[#E5E7EB] border border-[#D1D5DB] flex items-center justify-center shadow-sm">
+                        <Icon className="text-[#1D1D1F]" size={26} />
                       </div>
-                      <h3 className="text-[18px] font-semibold text-[#1D1D1F]">{card.title}</h3>
+                      <h3 className="text-[22px] font-bold text-[#1D1D1F]">{card.title}</h3>
                     </div>
-                    <span className="text-[11px] px-3 py-1 rounded-full bg-[#F5EFE6] text-[#7A6A55] border border-[#E8E2D9]">
+                    <span className="text-[12px] px-3 py-1.5 rounded-full bg-[#FEF3C7] text-[#92400E] border border-[#FCD34D] font-semibold">
                       {chip}
                     </span>
                   </div>
 
-                  <p className="text-[14px] leading-relaxed text-[#6B7280] mb-6">
+                  <p className="text-[15px] leading-relaxed text-[#6B7280] mb-8 font-medium">
                     {card.description}
                   </p>
 
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between pt-6 border-t border-[#F3F4F6]">
                     <div>
-                      <p className="text-[12px] text-[#9CA3AF]">Example target</p>
-                      <p className="text-[15px] font-semibold text-[#1D1D1F]">
-                        ₦50,000 – ₦2,000,000
+                      <p className="text-[12px] text-[#9CA3AF] font-semibold uppercase tracking-wider">Target Range</p>
+                      <p className="text-[18px] font-bold text-[#1D1D1F] mt-2">
+                        ₦50,000 – ₦2M
                       </p>
                     </div>
 
                     <a
                       href="/open-account"
-                      className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#007AFF] text-white text-[13px] font-semibold shadow-lg shadow-[#007AFF]/20 hover:bg-[#0051D5] transition-all active:scale-95"
+                      className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-[#007AFF] text-white text-[14px] font-bold shadow-lg shadow-[#007AFF]/25 hover:bg-[#0051D5] hover:shadow-lg hover:shadow-[#0051D5]/30 transition-all active:scale-95"
                     >
-                      <span>Start Plan</span>
-                      <ArrowRight size={16} />
+                      <span>Start</span>
+                      <ArrowRight size={18} />
                     </a>
                   </div>
                 </div>
