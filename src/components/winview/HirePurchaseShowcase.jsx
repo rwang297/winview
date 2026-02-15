@@ -84,7 +84,7 @@ export default function HirePurchaseShowcase() {
   };
 
   return (
-    <section className="relative px-6 pt-6 pb-16 bg-[#FAF7F2]">
+    <section className="relative px-6 pt-20 pb-16 bg-[#FAF7F2]">
       <div className="pointer-events-none absolute -top-24 -left-10 w-[520px] h-[520px] bg-gradient-to-br from-[#007AFF]/8 to-[#5AC8FA]/8 rounded-full blur-[110px] animate-breathe" />
       <div
         className="pointer-events-none absolute -bottom-28 -right-16 w-[560px] h-[560px] bg-gradient-to-tl from-[#FFB86C]/8 to-[#FFD1A6]/8 rounded-full blur-[120px] animate-breathe"
@@ -107,7 +107,7 @@ export default function HirePurchaseShowcase() {
         </div>
 
         {/* Two-column layout: slider + writeup */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-14 items-stretch">
           {/* Slider */}
           <div className="relative">
             {/* Dynamic background that changes with each slide */}
@@ -127,7 +127,7 @@ export default function HirePurchaseShowcase() {
                 {slides.map((s) => (
                   <div key={s.key} className="min-w-full">
                     {/* Match visual height; ensure overflow cuts edges for a centered, cropped look */}
-                    <div className="relative h-[460px] md:h-[620px] lg:h-[740px] overflow-hidden">
+                    <div className="relative h-[420px] md:h-[540px] lg:h-[620px] overflow-hidden">
                       <img
                         src={s.image}
                         alt={s.alt}
@@ -176,54 +176,49 @@ export default function HirePurchaseShowcase() {
           </div>
 
           {/* iOS-style writeup/CTA - remove flex wrapper and card box */}
-          <div className="lg:pl-6 pt-2 md:pt-4 lg:pt-6">
+          <div className="lg:pl-8 pt-4 md:pt-6 lg:pt-8">
             {/* Removed the rounded white container and ambient glow blobs */}
             <h2
-              className="text-[42px] md:text-[52px] font-semibold text-[#1D1D1F] tracking-tight"
+              className="text-[48px] md:text-[58px] font-bold text-[#1D1D1F] tracking-tight"
               style={iosFont}
             >
               Jump on our Hire Purchase Plan
             </h2>
-            <p className="mt-5 text-[18px] md:text-[20px] text-[#86868b]" style={iosFont}>
+            <p className="mt-5 text-[18px] md:text-[21px] font-semibold text-[#555555]" style={iosFont}>
               Salary earners and private individuals can own a Tricycle, Motorbike, or Mini Bus —
               and pay gradually for up to 80 months. Simple terms, clear payments, and fast
               approvals so you can start earning sooner.
             </p>
 
-            <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
                 'Low entry cost',
                 'Transparent payments',
                 'Own as you earn',
                 'Bank‑level support',
               ].map((t) => (
-                <div key={t} className="flex items-center gap-2">
-                  <div className="w-6 h-6 rounded-full bg-[#34C759]/15 text-[#34C759] flex items-center justify-center">
-                    <CheckCircle2 size={14} />
+                <div key={t} className="flex items-center gap-3">
+                  <div className="w-7 h-7 rounded-full bg-[#34C759]/20 text-[#34C759] flex items-center justify-center flex-shrink-0">
+                    <CheckCircle2 size={16} />
                   </div>
-                  <span className="text-[14px] text-[#1D1D1F]" style={iosFont}>
+                  <span className="text-[16px] font-semibold text-[#1D1D1F]" style={iosFont}>
                     {t}
                   </span>
                 </div>
               ))}
             </div>
 
-            <div className="mt-8 flex items-center gap-5 flex-wrap">
+            <div className="mt-10">
               <a
                 href="/open-account?flow=hire-purchase"
-                className="group inline-flex items-center gap-3 px-7 py-4 rounded-full bg-white/90 text-[#1D1D1F] font-medium border border-white/70 shadow-sm hover:bg-white focus:outline-none focus:ring-2 focus:ring-[#007AFF]/40 transition"
+                className="group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-[#007AFF] text-white font-semibold text-[16px] border border-[#007AFF] shadow-lg hover:bg-[#0051D5] hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#007AFF]/40 transition duration-200"
                 style={iosFont}
               >
                 <span>Register now</span>
-                <span className="w-8 h-8 rounded-full bg-[#007AFF] text-white flex items-center justify-center shadow transition-transform duration-200 group-hover:translate-x-0.5">
+                <span className="w-8 h-8 rounded-full bg-white/25 text-white flex items-center justify-center transition-transform duration-200 group-hover:translate-x-1">
                   <ChevronRightIcon size={18} />
                 </span>
               </a>
-
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F2F2F7] text-[#1D1D1F]/70 border border-black/5 text-xs">
-                <ShieldCheck size={14} className="text-[#34C759]" />
-                <span style={iosFont}>Takes you to registration</span>
-              </div>
             </div>
           </div>
         </div>
