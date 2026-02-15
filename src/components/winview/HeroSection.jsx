@@ -85,64 +85,61 @@ export default function HeroSection() {
 
   return (
     <section
-      className="relative -mt-20 lg:-mt-28 pt-20 lg:pt-28 pb-20 px-6 overflow-hidden bg-white dark:bg-neutral-900"
+      className="relative -mt-20 lg:-mt-28 pt-20 lg:pt-28 pb-20 px-6 overflow-hidden bg-gradient-to-b from-blue-50 via-white to-cyan-50 dark:bg-neutral-900"
       onMouseMove={handleMouseMove}
     >
-      {/* Background Image - Extended to cover header */}
-      <div className="absolute inset-0 z-0 -top-20 lg:-top-28">
+      {/* Bright gradient background */}
+      <div className="absolute inset-0 z-0 -top-20 lg:-top-28 bg-gradient-to-br from-blue-50 via-white to-cyan-50 dark:from-neutral-900/50 dark:via-neutral-900 dark:to-neutral-900/50" />
+
+      {/* Background Image - Extended to cover header with water flow animation */}
+      <div className="absolute inset-0 z-0 -top-20 lg:-top-28 overflow-hidden">
         <img
           src="https://raw.createusercontent.com/e4c7154d-a7bb-4f7a-9126-0a9ba6fa1e50/"
           alt="Abstract Background"
-          className="w-full h-[calc(100%+5rem)] lg:h-[calc(100%+7rem)] object-cover opacity-[0.225] mix-blend-overlay transition-opacity duration-700 ease-out"
+          className="w-full h-[calc(100%+5rem)] lg:h-[calc(100%+7rem)] object-cover opacity-[0.08] mix-blend-overlay transition-opacity duration-700 ease-out"
+          style={{
+            animation: 'waterFlow 12s ease-in-out infinite',
+          }}
           decoding="async"
           fetchpriority="high"
         />
-        {/* Lighten overlay so more of the image shows while keeping text readable */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/70 to-white/95 dark:via-neutral-900/70 dark:to-neutral-900/95" />
+        {/* Light overlay for brightness */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/30 to-white/60 dark:via-neutral-900/30 dark:to-neutral-900/60" />
       </div>
 
-      {/* Dynamic Background Mesh - Enhanced with mouse tracking and extended upward */}
+      {/* Dynamic Background Mesh - Bright and friendly */}
       <div
-        className="absolute top-[-40%] right-[-10%] w-[800px] h-[800px] bg-gradient-to-br from-brand-400/12 to-accent-400/12 rounded-full blur-[120px] mix-blend-multiply will-change-transform"
+        className="absolute top-[-40%] right-[-10%] w-[800px] h-[800px] bg-gradient-to-br from-blue-300/20 to-cyan-300/15 rounded-full blur-[120px] mix-blend-screen will-change-transform"
         style={{
           animation: 'float 8s cubic-bezier(0.4, 0, 0.6, 1) infinite alternate',
           transform: `translate(${mousePosition.x * 20}px, ${mousePosition.y * 10}px)`,
         }}
       />
       <div
-        className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-gradient-to-tr from-success-300/8 to-warning-200/8 rounded-full blur-[100px] will-change-transform"
+        className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-gradient-to-tr from-emerald-200/15 to-amber-200/12 rounded-full blur-[100px] will-change-transform"
         style={{
           animation: 'float 6s cubic-bezier(0.4, 0, 0.6, 1) infinite alternate-reverse',
           transform: `translate(${mousePosition.x * -15}px, ${mousePosition.y * 15}px)`,
         }}
       />
-      {/* Warm ambient glow - extended upward */}
-      <div className="absolute top-[-10%] left-[20%] w-[500px] h-[500px] bg-gradient-to-br from-brand-200/8 to-accent-200/8 rounded-full blur-[120px] pointer-events-none" />
+      {/* Warm ambient glow */}
+      <div className="absolute top-[-10%] left-[20%] w-[500px] h-[500px] bg-gradient-to-br from-blue-200/12 to-purple-200/10 rounded-full blur-[120px] pointer-events-none" />
 
-      <div className="w-full relative z-10 pt-32">
-        <div className={`grid lg:grid-cols-2 gap-16 items-center`}>
+      <div className="w-full relative z-10 pt-12 lg:pt-16">
+        <div className={`grid lg:grid-cols-2 gap-8 lg:gap-16 items-center auto-rows-max`}>
           <div
-            className={`text-center lg:text-left max-w-[600px] mx-auto lg:mx-0 transition-all duration-1000 ease-out transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+            className={`text-center lg:text-left max-w-[650px] mx-auto lg:mx-0 transition-all duration-1000 ease-out transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
             style={{ transitionDelay: '100ms' }}
           >
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 pl-1 pr-3 py-1 bg-white/90 dark:bg-neutral-800/80 backdrop-blur-md border border-neutral-200 dark:border-neutral-700 rounded-full mb-8 shadow-sm hover:scale-105 transition-all duration-300 ease-out cursor-default will-change-transform">
-              <span className="bg-accent-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider shadow-sm">
-                Soon
-              </span>
-              <span className="text-[13px] font-semibold text-neutral-900 dark:text-neutral-200 flex items-center gap-1">
-                Mobile app is coming soon
-                <ChevronRight size={12} className="text-neutral-500 dark:text-neutral-400" />
-              </span>
-            </div>
 
             {/* Heading */}
             <h1
-              className="text-[56px] md:text-[72px] font-bold leading-[1.05] tracking-tight text-neutral-900 dark:text-neutral-100 mb-6"
+              className="text-[56px] md:text-[72px] lg:text-[76px] font-bold leading-[1.1] tracking-tight text-neutral-900 dark:text-neutral-100 mb-6 lg:mb-8 mt-0"
               style={{
                 fontFamily:
                   '-apple-system, BlinkMacSystemFont, "SF Pro Display", system-ui, sans-serif',
                 animation: 'fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s both',
+                letterSpacing: '-0.02em',
               }}
             >
               Banking. <br />
@@ -153,7 +150,7 @@ export default function HeroSection() {
 
             {/* Supporting text */}
             <p
-              className="text-lg md:text-xl leading-relaxed text-neutral-700 dark:text-neutral-300 mb-10 max-w-[520px] mx-auto lg:mx-0 font-normal"
+              className="text-lg md:text-xl leading-relaxed text-neutral-600 dark:text-neutral-400 mb-10 lg:mb-12 max-w-[550px] mx-auto lg:mx-0 font-normal"
               style={{
                 fontFamily:
                   '-apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif',
@@ -166,26 +163,26 @@ export default function HeroSection() {
 
             {/* CTAs */}
             <div
-              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4"
+              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 lg:gap-5"
               style={{
                 animation: 'fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s both',
               }}
             >
               <a
                 href="/open-account"
-                className="btn-primary w-full sm:w-auto flex items-center justify-center gap-2"
+                className="btn-primary w-full sm:w-auto flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-all duration-300 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold text-lg px-8 py-4"
               >
                 <span>Open Account</span>
-                <ArrowRight size={18} />
+                <ArrowRight size={20} />
               </a>
               <a
                 href="#app-coming-soon"
-                className="group w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3 bg-neutral-100 dark:bg-neutral-800 text-brand-600 dark:text-brand-400 rounded-lg font-semibold border border-neutral-200 dark:border-neutral-700 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-all duration-300 ease-out active:scale-[0.98] will-change-transform"
+                className="group w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-bold text-lg rounded-lg border border-emerald-600/50 hover:shadow-lg transition-all duration-300 ease-out active:scale-[0.98] will-change-transform"
               >
-                <ShieldCheck size={18} />
+                <ShieldCheck size={20} />
                 <span>Secure banking</span>
                 <ChevronRight
-                  size={16}
+                  size={18}
                   className="transition-transform duration-300 group-hover:translate-x-1"
                 />
               </a>
@@ -193,7 +190,7 @@ export default function HeroSection() {
 
             {/* Trust Indicators */}
             <div
-              className="mt-12 flex items-center gap-6 text-neutral-700 dark:text-neutral-300 text-sm font-medium"
+              className="mt-14 lg:mt-16 flex items-center gap-6 text-neutral-800 dark:text-neutral-100 text-base font-bold"
               style={{
                 animation: 'fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s both',
               }}
@@ -202,7 +199,7 @@ export default function HeroSection() {
                 {[1, 2, 3, 4].map((i) => (
                   <div
                     key={i}
-                    className="w-8 h-8 rounded-full bg-neutral-300 dark:bg-neutral-700 border-2 border-white dark:border-neutral-800 flex items-center justify-center text-[10px] overflow-hidden transition-transform duration-200 hover:scale-110 hover:z-10 relative will-change-transform shadow-sm"
+                    className="w-12 h-12 rounded-full bg-neutral-300 dark:bg-neutral-700 border-3 border-white dark:border-neutral-800 flex items-center justify-center text-[10px] overflow-hidden transition-transform duration-200 hover:scale-110 hover:z-10 relative will-change-transform shadow-md"
                     style={{ animationDelay: `${0.6 + i * 0.1}s` }}
                   >
                     <img
@@ -214,17 +211,17 @@ export default function HeroSection() {
                 ))}
               </div>
               <p className="flex items-center gap-2">
-                <Lock size={16} className="text-success-500" /> Trusted by 10,000+ members
+                <Lock size={20} className="text-success-500" /> Trusted by 10,000+ members
               </p>
             </div>
           </div>
 
           {/* Hero Image / Interaction */}
           <div
-            className={`relative transition-all duration-1000 delay-300 ease-out transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+            className={`relative transition-all duration-1000 delay-300 ease-out transform flex justify-center ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
           >
             <div
-              className="relative z-10 rounded-[40px] overflow-hidden shadow-lg dark:shadow-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 transition-all duration-500 ease-out will-change-transform"
+              className="relative z-10 rounded-[40px] overflow-hidden shadow-lg dark:shadow-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 transition-all duration-500 ease-out will-change-transform max-w-[420px] w-full"
               style={{ transform: phoneTransform }}
               onMouseMove={handlePhoneMove}
               onMouseEnter={handlePhoneEnter}
@@ -259,9 +256,9 @@ export default function HeroSection() {
                 {/* Balance Card with animated amount */}
                 <div
                   ref={balanceRef}
-                  className="bg-gradient-to-br from-neutral-900 to-neutral-800 dark:from-neutral-800 dark:to-neutral-700 p-8 rounded-2xl text-white shadow-lg mb-6 relative overflow-hidden group transition-all duration-500 ease-out"
+                  className="bg-gradient-to-br from-neutral-900 to-neutral-800 dark:from-neutral-800 dark:to-neutral-700 p-8 rounded-2xl text-white shadow-xl mb-6 relative overflow-hidden group transition-all duration-500 ease-out border border-white/5 dark:border-white/5"
                 >
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-white/3 rounded-full blur-2xl -mr-10 -mt-10" />
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-white/4 rounded-full blur-3xl -mr-10 -mt-10" />
                   <p className="text-white/70 mb-2 font-medium text-sm">Total Balance</p>
                   <h3 className="text-4xl font-bold mb-8 tracking-tight">{balanceText}</h3>
                   <div className="flex gap-3">
@@ -341,24 +338,6 @@ export default function HeroSection() {
               </div>
             </div>
 
-            {/* Floating card on side */}
-            <div
-              className="absolute top-1/2 -right-12 bg-white dark:bg-neutral-800 backdrop-blur-xl p-4 rounded-xl shadow-lg border border-neutral-200 dark:border-neutral-700 hidden lg:block z-20 will-change-transform"
-              style={{
-                animation: 'float 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                animationDelay: '1s',
-              }}
-            >
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-success-500 rounded-lg flex items-center justify-center transition-all duration-200">
-                  <ArrowRight size={18} className="text-white -rotate-45" />
-                </div>
-                <div>
-                  <p className="text-xs text-neutral-600 dark:text-neutral-400 font-medium">Income</p>
-                  <p className="text-sm font-bold text-neutral-900 dark:text-neutral-100">+ ₦4,250.00</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -385,6 +364,13 @@ export default function HeroSection() {
         }
         .animate-orbit { animation: orbit 4s ease-in-out infinite; }
         .animate-orbitSlow { animation: orbit 6s ease-in-out infinite; }
+        @keyframes waterFlow {
+          0% { transform: translateX(0) translateY(0) scale(1); filter: brightness(1) saturate(1) contrast(1); }
+          25% { transform: translateX(60px) translateY(-40px) scale(1.15); filter: brightness(1.3) saturate(1.4) contrast(1.1); }
+          50% { transform: translateX(0) translateY(-80px) scale(1.2); filter: brightness(1.4) saturate(1.5) contrast(1.2); }
+          75% { transform: translateX(-60px) translateY(-40px) scale(1.15); filter: brightness(1.3) saturate(1.4) contrast(1.1); }
+          100% { transform: translateX(0) translateY(0) scale(1); filter: brightness(1) saturate(1) contrast(1); }
+        }
       `}</style>
     </section>
   );
