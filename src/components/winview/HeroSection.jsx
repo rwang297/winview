@@ -85,39 +85,42 @@ export default function HeroSection() {
 
   return (
     <section
-      className="relative -mt-20 lg:-mt-28 pt-20 lg:pt-28 pb-20 px-6 overflow-hidden bg-white dark:bg-neutral-900"
+      className="relative -mt-20 lg:-mt-28 pt-20 lg:pt-28 pb-20 px-6 overflow-hidden bg-gradient-to-b from-blue-50 via-white to-cyan-50 dark:bg-neutral-900"
       onMouseMove={handleMouseMove}
     >
+      {/* Bright gradient background */}
+      <div className="absolute inset-0 z-0 -top-20 lg:-top-28 bg-gradient-to-br from-blue-50 via-white to-cyan-50 dark:from-neutral-900/50 dark:via-neutral-900 dark:to-neutral-900/50" />
+
       {/* Background Image - Extended to cover header */}
       <div className="absolute inset-0 z-0 -top-20 lg:-top-28">
         <img
           src="https://raw.createusercontent.com/e4c7154d-a7bb-4f7a-9126-0a9ba6fa1e50/"
           alt="Abstract Background"
-          className="w-full h-[calc(100%+5rem)] lg:h-[calc(100%+7rem)] object-cover opacity-[0.12] mix-blend-overlay transition-opacity duration-700 ease-out"
+          className="w-full h-[calc(100%+5rem)] lg:h-[calc(100%+7rem)] object-cover opacity-[0.08] mix-blend-overlay transition-opacity duration-700 ease-out"
           decoding="async"
           fetchpriority="high"
         />
-        {/* Darker overlay for better contrast and less brightness */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/50 to-white/80 dark:via-neutral-900/60 dark:to-neutral-900/90" />
+        {/* Light overlay for brightness */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/30 to-white/60 dark:via-neutral-900/30 dark:to-neutral-900/60" />
       </div>
 
-      {/* Dynamic Background Mesh - Enhanced with mouse tracking and extended upward */}
+      {/* Dynamic Background Mesh - Bright and friendly */}
       <div
-        className="absolute top-[-40%] right-[-10%] w-[800px] h-[800px] bg-gradient-to-br from-brand-400/6 to-accent-400/6 rounded-full blur-[120px] mix-blend-multiply will-change-transform"
+        className="absolute top-[-40%] right-[-10%] w-[800px] h-[800px] bg-gradient-to-br from-blue-300/20 to-cyan-300/15 rounded-full blur-[120px] mix-blend-screen will-change-transform"
         style={{
           animation: 'float 8s cubic-bezier(0.4, 0, 0.6, 1) infinite alternate',
           transform: `translate(${mousePosition.x * 20}px, ${mousePosition.y * 10}px)`,
         }}
       />
       <div
-        className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-gradient-to-tr from-success-300/4 to-warning-200/4 rounded-full blur-[100px] will-change-transform"
+        className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-gradient-to-tr from-emerald-200/15 to-amber-200/12 rounded-full blur-[100px] will-change-transform"
         style={{
           animation: 'float 6s cubic-bezier(0.4, 0, 0.6, 1) infinite alternate-reverse',
           transform: `translate(${mousePosition.x * -15}px, ${mousePosition.y * 15}px)`,
         }}
       />
-      {/* Warm ambient glow - extended upward */}
-      <div className="absolute top-[-10%] left-[20%] w-[500px] h-[500px] bg-gradient-to-br from-brand-200/4 to-accent-200/4 rounded-full blur-[120px] pointer-events-none" />
+      {/* Warm ambient glow */}
+      <div className="absolute top-[-10%] left-[20%] w-[500px] h-[500px] bg-gradient-to-br from-blue-200/12 to-purple-200/10 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="w-full relative z-10 pt-32">
         <div className={`grid lg:grid-cols-2 gap-8 lg:gap-16 items-center auto-rows-max`}>
@@ -358,6 +361,49 @@ export default function HeroSection() {
                   <p className="text-xs text-neutral-600 dark:text-neutral-400 font-medium">Income</p>
                   <p className="text-sm font-bold text-neutral-900 dark:text-neutral-100">+ ₦4,250.00</p>
                 </div>
+              </div>
+            </div>
+
+            {/* Friendly floating feature cards */}
+            <div className="hidden lg:block absolute -left-10 top-32 z-10">
+              <div
+                className="bg-gradient-to-br from-blue-400 to-blue-500 text-white p-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 w-48"
+                style={{
+                  animation: 'float 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                  animationDelay: '0.5s',
+                }}
+              >
+                <div className="text-3xl mb-2">💳</div>
+                <p className="font-semibold text-sm">Instant Cards</p>
+                <p className="text-xs text-blue-100 mt-1">Get your virtual card instantly</p>
+              </div>
+            </div>
+
+            <div className="hidden lg:block absolute right-0 bottom-40 z-10">
+              <div
+                className="bg-gradient-to-br from-emerald-400 to-emerald-500 text-white p-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 w-48"
+                style={{
+                  animation: 'float 5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                  animationDelay: '1.5s',
+                }}
+              >
+                <div className="text-3xl mb-2">🛡️</div>
+                <p className="font-semibold text-sm">Bank-Grade Security</p>
+                <p className="text-xs text-emerald-100 mt-1">Your money is always safe</p>
+              </div>
+            </div>
+
+            <div className="hidden lg:block absolute -right-20 top-48 z-10">
+              <div
+                className="bg-gradient-to-br from-purple-400 to-purple-500 text-white p-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 w-48"
+                style={{
+                  animation: 'float 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                  animationDelay: '2s',
+                }}
+              >
+                <div className="text-3xl mb-2">⚡</div>
+                <p className="font-semibold text-sm">Lightning Fast</p>
+                <p className="text-xs text-purple-100 mt-1">Transfers in seconds</p>
               </div>
             </div>
           </div>
