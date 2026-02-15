@@ -85,11 +85,11 @@ export default function HeroSection() {
 
   return (
     <section
-      className="relative -mt-20 lg:-mt-28 pt-20 lg:pt-28 pb-20 px-6 overflow-hidden bg-gradient-to-b from-blue-50 via-white to-cyan-50 dark:bg-neutral-900"
+      className="relative -mt-20 lg:-mt-28 pt-20 lg:pt-28 pb-20 px-6 overflow-hidden bg-gradient-to-b from-blue-50 via-white to-cyan-50"
       onMouseMove={handleMouseMove}
     >
       {/* Bright gradient background */}
-      <div className="absolute inset-0 z-0 -top-20 lg:-top-28 bg-gradient-to-br from-blue-50 via-white to-cyan-50 dark:from-neutral-900/50 dark:via-neutral-900 dark:to-neutral-900/50" />
+      <div className="absolute inset-0 z-0 -top-20 lg:-top-28 bg-gradient-to-br from-blue-50 via-white to-cyan-50" />
 
       {/* Background Image - Extended to cover header with water flow animation */}
       <div className="absolute inset-0 z-0 -top-20 lg:-top-28 overflow-hidden">
@@ -104,7 +104,7 @@ export default function HeroSection() {
           fetchpriority="high"
         />
         {/* Light overlay for brightness */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/30 to-white/60 dark:via-neutral-900/30 dark:to-neutral-900/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/30 to-white/60" />
       </div>
 
       {/* Dynamic Background Mesh - Bright and friendly */}
@@ -134,7 +134,7 @@ export default function HeroSection() {
 
             {/* Heading */}
             <h1
-              className="text-[56px] md:text-[72px] lg:text-[76px] font-bold leading-[1.1] tracking-tight text-neutral-900 dark:text-neutral-100 mb-6 lg:mb-8 mt-0"
+              className="text-[56px] md:text-[72px] lg:text-[76px] font-bold leading-[1.1] tracking-tight text-gray-950 mb-6 lg:mb-8 mt-0"
               style={{
                 fontFamily:
                   '-apple-system, BlinkMacSystemFont, "SF Pro Display", system-ui, sans-serif',
@@ -150,7 +150,7 @@ export default function HeroSection() {
 
             {/* Supporting text */}
             <p
-              className="text-lg md:text-xl leading-relaxed text-neutral-600 dark:text-neutral-400 mb-10 lg:mb-12 max-w-[550px] mx-auto lg:mx-0 font-normal"
+              className="text-lg md:text-xl leading-relaxed text-gray-900 mb-10 lg:mb-12 max-w-[550px] mx-auto lg:mx-0 font-normal"
               style={{
                 fontFamily:
                   '-apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif',
@@ -190,7 +190,7 @@ export default function HeroSection() {
 
             {/* Trust Indicators */}
             <div
-              className="mt-14 lg:mt-16 flex items-center gap-6 text-neutral-800 dark:text-neutral-100 text-base font-bold"
+              className="mt-14 lg:mt-16 flex items-center gap-6 text-gray-900 text-base font-bold"
               style={{
                 animation: 'fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s both',
               }}
