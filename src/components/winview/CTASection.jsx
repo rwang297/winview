@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react';
 export default function CTASection() {
   return (
     <section className="py-32 px-6 bg-[#FFFBF5] overflow-hidden relative">
-      <div className="max-w-[1200px] mx-auto">
+      <div className="w-full mx-auto">
         <div className="relative bg-[#1D1D1F] rounded-[48px] p-12 md:p-24 text-center overflow-hidden shadow-2xl group">
           {/* Background Image */}
           <div className="absolute inset-0 z-0 opacity-40 group-hover:scale-105 transition-transform duration-[2s] ease-out">

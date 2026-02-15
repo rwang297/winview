@@ -154,7 +154,7 @@ export default function AppDownloadSection() {
       />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-to-r from-indigo-600/10 to-purple-600/10 rounded-full blur-[100px] animate-breathe" />
 
-      <div className="max-w-[1200px] mx-auto relative z-10">
+      <div className="w-full px-6 mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           {/* Content Side */}
           <div className="text-center lg:text-left">

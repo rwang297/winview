@@ -42,7 +42,7 @@ export default function SavingsPackagesSection() {
       <div className="absolute -top-16 -left-10 w-[520px] h-[520px] bg-gradient-to-br from-[#FFB86C]/10 to-[#FFD1A6]/10 blur-[90px] rounded-full pointer-events-none" />
       <div className="absolute -bottom-20 -right-10 w-[560px] h-[560px] bg-gradient-to-tr from-[#8A2BE2]/10 to-[#5AC8FA]/10 blur-[110px] rounded-full pointer-events-none" />
 
-      <div className="max-w-[1200px] mx-auto relative z-10">
+      <div className="w-full px-6 mx-auto relative z-10">
         <div className="text-center mb-12">
           <h2
             className="text-[40px] md:text-[56px] font-semibold text-[#1D1D1F] tracking-tight mb-3"
