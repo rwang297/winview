@@ -85,11 +85,11 @@ export default function HeroSection() {
 
   return (
     <section
-      className="relative -mt-20 lg:-mt-28 pt-20 lg:pt-28 pb-20 px-6 overflow-hidden bg-gradient-to-b from-blue-50 via-white to-cyan-50 dark:bg-neutral-900"
+      className="relative -mt-20 lg:-mt-28 pt-20 lg:pt-28 pb-20 px-6 overflow-hidden bg-gradient-to-b from-blue-50 via-white to-cyan-50"
       onMouseMove={handleMouseMove}
     >
       {/* Bright gradient background */}
-      <div className="absolute inset-0 z-0 -top-20 lg:-top-28 bg-gradient-to-br from-blue-50 via-white to-cyan-50 dark:from-neutral-900/50 dark:via-neutral-900 dark:to-neutral-900/50" />
+      <div className="absolute inset-0 z-0 -top-20 lg:-top-28 bg-gradient-to-br from-blue-50 via-white to-cyan-50" />
 
       {/* Background Image - Extended to cover header with water flow animation */}
       <div className="absolute inset-0 z-0 -top-20 lg:-top-28 overflow-hidden">
@@ -104,7 +104,7 @@ export default function HeroSection() {
           fetchpriority="high"
         />
         {/* Light overlay for brightness */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/30 to-white/60 dark:via-neutral-900/30 dark:to-neutral-900/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/30 to-white/60" />
       </div>
 
       {/* Dynamic Background Mesh - Bright and friendly */}
