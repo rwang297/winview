@@ -58,7 +58,7 @@ export default function SavingsPackagesSection() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-6">
           {cards.map((card) => {
             const Icon = card.icon;
             const accent = card.accentBg;
