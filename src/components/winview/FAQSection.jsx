@@ -42,7 +42,7 @@ export default function FAQSection() {
       {/* Subtle Background Elements */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#7b5aff]/5 rounded-full blur-[100px] pointer-events-none" />
 
-      <div className="max-w-[1200px] mx-auto relative z-10">
+      <div className="w-full px-6 mx-auto relative z-10">
         <div className="grid md:grid-cols-12 gap-12">
           {/* Header Side */}
           <div className="md:col-span-4">

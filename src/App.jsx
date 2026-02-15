@@ -11,7 +11,7 @@ import HirePurchaseShowcase from "./components/winview/HirePurchaseShowcase";
 
 export default function Homepage() {
   return (
-    <div className="min-h-screen bg-[#FAF7F2]">
+    <div className="w-full min-h-screen bg-[#FAF7F2]">
       <Header />
       <HeroSection />
       {/* Newly added iOS-style hire purchase image slider + copy */}

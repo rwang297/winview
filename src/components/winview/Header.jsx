@@ -68,7 +68,7 @@ export default function Header() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${scrolled ? 'bg-white dark:bg-neutral-900 shadow-md border-b border-neutral-200 dark:border-neutral-700' : 'bg-transparent border-transparent shadow-none backdrop-blur-0'} ${mobileMenuOpen ? '[--menu-open:1]' : ''}`}
       >
-        <nav className="max-w-7xl mx-auto px-6 lg:px-8">
+        <nav className="w-full px-6 lg:px-8">
           {/* make the header row slightly shorter on mobile so the 85px (desktop) / 72px (mobile) logo fits cleanly */}
           <div className="flex items-center justify-between h-20 lg:h-28">
             {/* Logo */}

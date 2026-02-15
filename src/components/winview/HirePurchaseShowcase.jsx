@@ -91,7 +91,7 @@ export default function HirePurchaseShowcase() {
         style={{ animationDelay: '1s' }}
       />
 
-      <div className="max-w-[1280px] mx-auto">
+      <div className="w-full px-6 mx-auto">
         {/* iOS-style header badge */}
         <div
           className={`mb-6 transition-all duration-700 ${

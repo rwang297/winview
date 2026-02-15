@@ -13,7 +13,7 @@ import {
 export default function FeaturesSection() {
   return (
     <section className="py-20 lg:py-32 px-6 bg-white dark:bg-neutral-900">
-      <div className="max-w-7xl mx-auto">
+      <div className="w-full px-6 mx-auto">
         <div className="mb-16 lg:mb-20">
           <h2
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 dark:text-neutral-100 tracking-tight leading-tight"
