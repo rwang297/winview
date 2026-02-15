@@ -150,7 +150,7 @@ export default function HeroSection() {
 
             {/* Supporting text */}
             <p
-              className="text-lg md:text-xl leading-relaxed text-neutral-600 dark:text-neutral-400 mb-10 lg:mb-12 max-w-[550px] mx-auto lg:mx-0 font-normal"
+              className="text-lg md:text-xl leading-relaxed text-gray-900 mb-10 lg:mb-12 max-w-[550px] mx-auto lg:mx-0 font-normal"
               style={{
                 fontFamily:
                   '-apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif',
@@ -190,7 +190,7 @@ export default function HeroSection() {
 
             {/* Trust Indicators */}
             <div
-              className="mt-14 lg:mt-16 flex items-center gap-6 text-neutral-800 dark:text-neutral-100 text-base font-bold"
+              className="mt-14 lg:mt-16 flex items-center gap-6 text-gray-900 text-base font-bold"
               style={{
                 animation: 'fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s both',
               }}
