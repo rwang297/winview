@@ -365,11 +365,11 @@ export default function HeroSection() {
         .animate-orbit { animation: orbit 4s ease-in-out infinite; }
         .animate-orbitSlow { animation: orbit 6s ease-in-out infinite; }
         @keyframes waterFlow {
-          0% { transform: translateX(0) translateY(0) scale(1); filter: brightness(1); }
-          25% { transform: translateX(8px) translateY(-4px) scale(1.02); filter: brightness(1.05); }
-          50% { transform: translateX(0) translateY(-8px) scale(1); filter: brightness(1); }
-          75% { transform: translateX(-8px) translateY(-4px) scale(1.02); filter: brightness(1.05); }
-          100% { transform: translateX(0) translateY(0) scale(1); filter: brightness(1); }
+          0% { transform: translateX(0) translateY(0) scale(1); filter: brightness(1) saturate(1); }
+          25% { transform: translateX(40px) translateY(-25px) scale(1.08); filter: brightness(1.15) saturate(1.2); }
+          50% { transform: translateX(0) translateY(-50px) scale(1.1); filter: brightness(1.25) saturate(1.3); }
+          75% { transform: translateX(-40px) translateY(-25px) scale(1.08); filter: brightness(1.15) saturate(1.2); }
+          100% { transform: translateX(0) translateY(0) scale(1); filter: brightness(1) saturate(1); }
         }
       `}</style>
     </section>
