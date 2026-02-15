@@ -65,17 +65,17 @@ export default function Header() {
                 </div>
 
                 <div className="flex flex-col leading-tight">
-                  <span className="text-xl lg:text-2xl font-black text-white tracking-tight">
+                  <span className="text-xl lg:text-2xl font-black text-gray-800 tracking-tight">
                     Winview
                   </span>
                   <span
-                    className="text-[11px] sm:text-xs font-bold uppercase tracking-widest text-white whitespace-nowrap"
+                    className="text-[11px] sm:text-xs font-bold uppercase tracking-widest text-gray-800 whitespace-nowrap"
                     style={{ letterSpacing: '0.18em' }}
                   >
                     Microfinance Bank
                   </span>
                   <span
-                    className="-mt-0.5 text-[11px] sm:text-xs font-bold uppercase tracking-widest text-white whitespace-nowrap"
+                    className="-mt-0.5 text-[11px] sm:text-xs font-bold uppercase tracking-widest text-gray-800 whitespace-nowrap"
                     style={{ letterSpacing: '0.18em' }}
                   >
                     Limited
@@ -89,7 +89,7 @@ export default function Header() {
               className="hidden lg:flex items-center"
               style={{ fontFamily: iosText }}
             >
-                <div className="flex items-center gap-8 mr-8 text-white font-semibold text-lg tracking-wide">
+                <div className="flex items-center gap-8 mr-8 text-gray-800 font-semibold text-lg tracking-wide">
 
                 <a href="/" className="hover:opacity-80 transition">
                   Home
@@ -158,7 +158,7 @@ export default function Header() {
               <div className="flex items-center">
                 <a
                   href="tel:+1234567890"
-                  className="flex items-center gap-2 px-4 py-2.5 text-white font-medium rounded-lg hover:bg-white/10 transition"
+                    className="flex items-center gap-2 px-4 py-2.5 text-gray-800 font-medium rounded-lg hover:bg-gray-200/20 transition"
                 >
                   <Phone size={18} />
                   <span className="hidden sm:inline">Call Us</span>
@@ -169,7 +169,7 @@ export default function Header() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2.5 text-white rounded-lg transition active:scale-95"
+              className="lg:hidden p-2.5 text-gray-800 rounded-lg transition active:scale-95"
             >
               <div className="relative w-6 h-6">
                 <Menu
