@@ -91,12 +91,15 @@ export default function HeroSection() {
       {/* Bright gradient background */}
       <div className="absolute inset-0 z-0 -top-20 lg:-top-28 bg-gradient-to-br from-blue-50 via-white to-cyan-50 dark:from-neutral-900/50 dark:via-neutral-900 dark:to-neutral-900/50" />
 
-      {/* Background Image - Extended to cover header */}
-      <div className="absolute inset-0 z-0 -top-20 lg:-top-28">
+      {/* Background Image - Extended to cover header with water flow animation */}
+      <div className="absolute inset-0 z-0 -top-20 lg:-top-28 overflow-hidden">
         <img
           src="https://raw.createusercontent.com/e4c7154d-a7bb-4f7a-9126-0a9ba6fa1e50/"
           alt="Abstract Background"
           className="w-full h-[calc(100%+5rem)] lg:h-[calc(100%+7rem)] object-cover opacity-[0.08] mix-blend-overlay transition-opacity duration-700 ease-out"
+          style={{
+            animation: 'waterFlow 12s ease-in-out infinite',
+          }}
           decoding="async"
           fetchpriority="high"
         />
@@ -361,6 +364,13 @@ export default function HeroSection() {
         }
         .animate-orbit { animation: orbit 4s ease-in-out infinite; }
         .animate-orbitSlow { animation: orbit 6s ease-in-out infinite; }
+        @keyframes waterFlow {
+          0% { transform: translateX(0) translateY(0) scale(1); filter: brightness(1); }
+          25% { transform: translateX(8px) translateY(-4px) scale(1.02); filter: brightness(1.05); }
+          50% { transform: translateX(0) translateY(-8px) scale(1); filter: brightness(1); }
+          75% { transform: translateX(-8px) translateY(-4px) scale(1.02); filter: brightness(1.05); }
+          100% { transform: translateX(0) translateY(0) scale(1); filter: brightness(1); }
+        }
       `}</style>
     </section>
   );
